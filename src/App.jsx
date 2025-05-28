@@ -3,6 +3,7 @@ import "./App.css";
 import CreateButton from "./component/CreateButton";
 import ReadTodo from "./component/ReadTodo";
 import NowTime from "./component/NowTime";
+import WiseSaying from "./component/WiseSaying";
 
 function App() {
   // Todo 생성/조회/수정/삭제 (CRUD) 기능을 구현하세요.
@@ -14,6 +15,7 @@ function App() {
     <div>
       <NowTime />
       <h1>To Do List</h1>
+      <WiseSaying />
       <CreateButton 
         inputValue = {inputValue} 
         setInputValue = {setInputValue}
