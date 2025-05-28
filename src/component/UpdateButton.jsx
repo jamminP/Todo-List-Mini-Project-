@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 function UpdateButton({ el, updateValue, setUpdateValue, setTodo }) {
   return (
     <>
@@ -35,9 +37,16 @@ function BeforeUpdate({el, setTodo}){
 }
 
 function AfterUpdate({updateValue, setUpdateValue, el, setTodo}){
-    return(
+  const inputRef = useRef(null);
+  
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+  
+  return(
         <>
           <input
+            ref={inputRef}
             type="text"
             value={updateValue}
             onChange={(e) => setUpdateValue(e.target.value)}
