@@ -12,7 +12,7 @@ function NowTime(){
 
     return(
     <>
-        <div>
+        <div class="mb-6">
             {date.toLocaleDateString()}
             <br/>
             {date.toLocaleTimeString()}

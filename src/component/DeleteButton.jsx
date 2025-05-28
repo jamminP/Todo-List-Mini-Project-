@@ -11,7 +11,10 @@ function DeleteButton({ setTodo, el }) {
 
   return (
     <>
-      <button onClick={handleDelete}>삭제</button>
+      <button 
+      class="bg-red-400 p-2 rounded-lg text-amber-50 hover:bg-red-700"
+      onClick={handleDelete}
+      >삭제</button>
     </>
   );
 }

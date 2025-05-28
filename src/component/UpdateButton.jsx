@@ -18,6 +18,7 @@ function UpdateButton({ el, updateValue, setUpdateValue, setTodo }) {
 function BeforeUpdate({ el, setTodo }) {
   return (
     <button
+      class="bg-green-400 p-2 rounded-lg text-amber-50 hover:bg-green-700"
       onClick={() => {
         setTodo((prev) =>
           prev.map((data) =>
@@ -68,12 +69,15 @@ function AfterUpdate({ el, setTodo }) {
   return (
     <>
       <input
+        class="flex-1 p-2 border rounded-md shadow-sm text-center bg-white"
         ref={inputRef}
         type="text"
         value={localValue}
         onChange={(e) => setLocalValue(e.target.value)}
       />
-      <button onClick={handleUpdate}>수정하기</button>
+      <button 
+      class="bg-green-400 p-2 rounded-lg text-amber-50 hover:bg-green-700"
+      onClick={handleUpdate}>수정하기</button>
     </>
   );
 }

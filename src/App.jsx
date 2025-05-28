@@ -12,24 +12,27 @@ function App() {
   const [updateValue, setUpdateValue] = useState("");
 
   return (
-    <div>
-      <NowTime />
-      <h1>To Do List</h1>
-      <WiseSaying />
-      <CreateButton 
-        inputValue = {inputValue} 
-        setInputValue = {setInputValue}
-        todo={todo}
-        setTodo={setTodo}
+    <div class="min-h-screen bg-gray-100 flex flex-col items-center p-6">
+      <div class="bg-white shadow-md rounded-lg w-full max-w-xl p-6">
+        <NowTime class="flex text-sm text-gray-500 mb-4" />
+        <h1 class="text-3xl font-bold text-center text-blue-600 mb-8">To Do List</h1>
+        <WiseSaying />
+        <CreateButton
+          class="mt-6"
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          todo={todo}
+          setTodo={setTodo}
         />
-      <ReadTodo
-        inputValue = {inputValue} 
-        setInputValue = {setInputValue}
-        todo={todo}
-        setTodo={setTodo}
-        updateValue = {updateValue}
-        setUpdateValue = {setUpdateValue}
-      />
+        <ReadTodo
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          todo={todo}
+          setTodo={setTodo}
+          updateValue={updateValue}
+          setUpdateValue={setUpdateValue}
+        />
+      </div>
     </div>
   );
 }
